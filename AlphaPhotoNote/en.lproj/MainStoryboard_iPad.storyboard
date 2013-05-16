@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="V2F-cK-9Oq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qwL-2m-w7s">
+            <objects>
+                <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="V2F-cK-9Oq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lha-dc-NWa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gXW-aA-AsE">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="kct-tr-zNI" kind="relationship" relationship="rootViewController" id="BWy-kP-4Wd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpR-ey-eG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6528" y="-7212"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="cCl-Ur-Fpm">
+            <objects>
+                <viewController id="kct-tr-zNI" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rt8-09-akv">
+                        <rect key="frame" x="0.0" y="44" width="768" height="936"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="eKt-X9-GKO" customClass="SmoothedBIView">
+                                <rect key="frame" x="0.0" y="-48" width="768" height="984"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zgH-kD-Kuo">
+                                        <rect key="frame" x="224" y="409" width="320" height="174"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Write a Note using your finger with a selected color over a Photo, Saved Image or White Canvas and save it to your camera roll.                            Start Writing on the Screen.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="trash" id="kxn-aj-79E">
+                            <connections>
+                                <action selector="trashNote:" destination="kct-tr-zNI" id="icG-RA-9IG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="pageCurl" id="Mtr-Tj-7Zm">
+                            <connections>
+                                <action selector="clearNote:" destination="kct-tr-zNI" id="Xz6-Xe-HOg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="WgS-XT-ZJd"/>
+                        <barButtonItem systemItem="camera" id="gZ8-Jw-hjm">
+                            <connections>
+                                <action selector="takePhoto:" destination="kct-tr-zNI" id="aa9-3L-eN7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="udU-T4-5vm"/>
+                        <barButtonItem systemItem="organize" id="US2-if-Qb6">
+                            <connections>
+                                <action selector="addPhoto:" destination="kct-tr-zNI" id="ifH-hk-pcd"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="IQi-Zr-At7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="NRJ-ph-cIG">
+                            <connections>
+                                <action selector="setColorPen:" destination="kct-tr-zNI" id="klR-nn-1cN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zw9-zo-lYx">
+                            <connections>
+                                <action selector="saveAlphaPhoto:" destination="kct-tr-zNI" id="rrA-Po-BiM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="colorButton" destination="NRJ-ph-cIG" id="xvI-gf-hQn"/>
+                        <outlet property="presentationLabel" destination="zgH-kD-Kuo" id="sSr-q1-nhv"/>
+                        <outlet property="saveButton" destination="Zw9-zo-lYx" id="XRX-jz-UCC"/>
+                        <outlet property="selectedImage" destination="eKt-X9-GKO" id="Nmk-Zy-Ppj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g20-r4-PB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5265" y="-7212"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

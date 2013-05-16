@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VUq-c7-4D3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="Rml-qW-0QX">
+            <objects>
+                <viewController id="Omw-AF-9kA" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBf-Zh-XXK">
+                        <rect key="frame" x="0.0" y="44" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="LVs-rL-fWv" customClass="SmoothedBIView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0A-cF-MMF">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="296"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Write a Note using your finger with a selected color over a Photo, Saved Image or White Canvas and save it to your camera roll.                           Start Writing on the Screen.                       </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="trash" id="bjd-wC-fGE">
+                            <connections>
+                                <action selector="trashNote:" destination="Omw-AF-9kA" id="gKw-RI-kU9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="pageCurl" id="J5Z-2U-zDN">
+                            <connections>
+                                <action selector="clearNote:" destination="Omw-AF-9kA" id="EY0-Ox-vUA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="SqJ-VN-hZg"/>
+                        <barButtonItem systemItem="camera" id="oNN-24-Ovt">
+                            <connections>
+                                <action selector="takePhoto:" destination="Omw-AF-9kA" id="8X7-2a-W9G"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6ds-r6-vDi"/>
+                        <barButtonItem systemItem="organize" id="NJw-xW-eSk">
+                            <connections>
+                                <action selector="addPhoto:" destination="Omw-AF-9kA" id="gRn-D7-jGh"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="yh6-Kp-485">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="udf-OC-PPn">
+                            <connections>
+                                <action selector="setColorPen:" destination="Omw-AF-9kA" id="xL8-Th-KFa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h2V-un-Q2h">
+                            <connections>
+                                <action selector="saveAlphaPhoto:" destination="Omw-AF-9kA" id="UE7-KN-236"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="clearButton" destination="J5Z-2U-zDN" id="Yxl-iD-elm"/>
+                        <outlet property="presentationLabel" destination="k0A-cF-MMF" id="Ied-4C-3zm"/>
+                        <outlet property="saveButton" destination="h2V-un-Q2h" id="RSy-vp-mz9"/>
+                        <outlet property="selectedImage" destination="LVs-rL-fWv" id="LaW-Xe-0rD"/>
+                        <outlet property="trashButton" destination="bjd-wC-fGE" id="B40-W3-gy8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ew-l1-olr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2851" y="-4504"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ua-N4-dOh">
+            <objects>
+                <navigationController toolbarHidden="NO" id="VUq-c7-4D3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zfx-Fg-zhK"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="vyX-yj-e4z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="sav-L5-Bab">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Omw-AF-9kA" kind="relationship" relationship="rootViewController" id="Zta-qA-XH5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1TE-SZ-h4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3377" y="-4504"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
