@@ -10,12 +10,12 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <QuartzCore/QuartzCore.h>
 #import <iAd/iAd.h>
-#import "GADBannerView.h"
+//#import "GADBannerView.h"
 
 #define kActionSheetColor       100
 
 
-@interface PhotoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIPopoverControllerDelegate,UIActionSheetDelegate,ADBannerViewDelegate,GADBannerViewDelegate>
+@interface PhotoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIPopoverControllerDelegate,UIActionSheetDelegate,ADBannerViewDelegate>/*GADBannerViewDelegate*/
 
 
 @property (strong, nonatomic) UIPopoverController *imagePickerPopover;
@@ -28,9 +28,9 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *clearButton;
 
 @property (strong, nonatomic) ADBannerView *bannerView;
-@property (strong, nonatomic) GADBannerView *adMobView;
+//@property (strong, nonatomic) GADBannerView *adMobView;
 @property (nonatomic,assign) BOOL bannerAdIsVisible;
-@property (nonatomic,assign) BOOL bannerGADIsVisible;
+//@property (nonatomic,assign) BOOL bannerGADIsVisible;
 @property (nonatomic,assign) BOOL showAds;
 @property (weak, nonatomic) IBOutlet UILabel *presentationLabel;
 @end
@@ -40,7 +40,7 @@
 @synthesize colorButton,saveButton,trashButton,clearButton,presentationLabel;
 @synthesize selectedImage = _selectedImage;
 @synthesize bannerView = _bannerView;
-@synthesize adMobView  = _adMobView;
+//@synthesize adMobView  = _adMobView;
 
 
 - (void)awakeFromNib
@@ -276,7 +276,7 @@
         self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
         [UIView commitAnimations];
         self.bannerAdIsVisible = YES;
-        self.bannerGADIsVisible = NO;
+   //     self.bannerGADIsVisible = NO;
     }
  
 }
@@ -291,7 +291,7 @@
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
     
-    //NSLog(@"Failed to receive iAd. Trying AdMob %@", error.localizedDescription);
+   // NSLog(@"Failed to receive iAd. Trying AdMob %@", error.localizedDescription);
     
     
     if (self.bannerAdIsVisible)
@@ -301,22 +301,22 @@
         self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -(self.view.frame.size.height- self.view.bounds.size.height));
         [UIView commitAnimations];
         self.bannerAdIsVisible = NO;
-        self.bannerGADIsVisible = YES;
+    //    self.bannerGADIsVisible = YES;
     }
-    
+    /*
     if (!self.bannerGADIsVisible)
     {
         [UIView beginAnimations:@"animateGADBannerOn" context:NULL];
         // banner is invisible now and moved out of the screen
-        self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
+      //  self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
         [UIView commitAnimations];
         self.bannerGADIsVisible = YES;
         self.bannerAdIsVisible = NO;
-    }
+    }*/
  
 }
 
-
+/*
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
 {
    // NSLog(@"Failed to receive AdMob. Trying ...? %@", error.localizedDescription);
@@ -331,7 +331,7 @@
     }
     
     
-}
+}*/
 
 - (BOOL)bannerViewActionShouldBegin:
 (ADBannerView *)banner
@@ -359,13 +359,13 @@
       //Landscape;
         self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        self.adMobView.adSize = kGADAdSizeSmartBannerLandscape;
+ //       self.adMobView.adSize = kGADAdSizeSmartBannerLandscape;
     }
     else{
     //Portrait;
         self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        self.adMobView.adSize = kGADAdSizeSmartBannerPortrait;
+ //       self.adMobView.adSize = kGADAdSizeSmartBannerPortrait;
         
     }
  
@@ -374,7 +374,7 @@
 
 - (void) configueBanners
 {
-    BOOL isIPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? YES : NO;
+    //BOOL isIPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? YES : NO;
     
     //iAd
     if (self.showAds)
@@ -390,7 +390,7 @@
     self.bannerAdIsVisible=NO;
     
     //AdMob
-    
+ /*
     self.adMobView = [[GADBannerView alloc] initWithFrame:CGRectZero];
     self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0,  -(self.view.frame.size.height- self.view.bounds.size.height));
     
@@ -412,6 +412,7 @@
     
     [self.view addSubview:self.adMobView];
     self.bannerGADIsVisible=NO;
+        */
     }
     
     
