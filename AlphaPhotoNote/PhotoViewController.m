@@ -291,7 +291,7 @@
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
     
-    NSLog(@"Failed to receive iAd. Trying AdMob %@", error.localizedDescription);
+    //NSLog(@"Failed to receive iAd. Trying AdMob %@", error.localizedDescription);
     
     
     if (self.bannerAdIsVisible)
@@ -319,7 +319,7 @@
 
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
 {
-    NSLog(@"Failed to receive AdMob. Trying ...? %@", error.localizedDescription);
+   // NSLog(@"Failed to receive AdMob. Trying ...? %@", error.localizedDescription);
     if (self.bannerGADIsVisible)
     {
         [UIView beginAnimations:@"animateGADBannerOff" context:NULL];
@@ -340,6 +340,19 @@
     return YES;
 }
 
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
@@ -350,7 +363,7 @@
     }
     else{
     //Portrait;
-        self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+        self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
         self.adMobView.adSize = kGADAdSizeSmartBannerPortrait;
         
@@ -417,5 +430,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
