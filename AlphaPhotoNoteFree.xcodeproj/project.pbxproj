@@ -27,7 +27,6 @@
 		44AFF97B172468EF00EC6206 /* SmoothedBIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AFF977172468EF00EC6206 /* SmoothedBIView.m */; };
 		EF6E7A0E1733BD2700AF75AB /* photoNoteNonRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */; };
 		EF6E7A101733BD3200AF75AB /* photoNoteRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */; };
-		EF9191D4174529DE00FFC8B8 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9191D3174529DE00FFC8B8 /* libGoogleAdMobAds.a */; };
 		EFEAE047173BC40E002F816B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE046173BC40E002F816B /* MessageUI.framework */; };
 		EFEAE049173BC437002F816B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE048173BC437002F816B /* SystemConfiguration.framework */; };
 		EFEAE04B173BC43F002F816B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE04A173BC43F002F816B /* AudioToolbox.framework */; };
@@ -64,16 +63,6 @@
 		EF6E7A0B17339EA700AF75AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteNonRetina.png; path = ../photoNoteNonRetina.png; sourceTree = "<group>"; };
 		EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteRetina.png; path = ../photoNoteRetina.png; sourceTree = "<group>"; };
-		EF9191CA174529DE00FFC8B8 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = AdMob/GADAdMobExtras.h; sourceTree = "<group>"; };
-		EF9191CB174529DE00FFC8B8 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = AdMob/GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		EF9191CC174529DE00FFC8B8 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = AdMob/GADAdSize.h; sourceTree = "<group>"; };
-		EF9191CD174529DE00FFC8B8 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = AdMob/GADBannerView.h; sourceTree = "<group>"; };
-		EF9191CE174529DE00FFC8B8 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = AdMob/GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		EF9191CF174529DE00FFC8B8 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = AdMob/GADInterstitial.h; sourceTree = "<group>"; };
-		EF9191D0174529DE00FFC8B8 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = AdMob/GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		EF9191D1174529DE00FFC8B8 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = AdMob/GADRequest.h; sourceTree = "<group>"; };
-		EF9191D2174529DE00FFC8B8 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = AdMob/GADRequestError.h; sourceTree = "<group>"; };
-		EF9191D3174529DE00FFC8B8 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = AdMob/libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		EFEAE046173BC40E002F816B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EFEAE048173BC437002F816B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EFEAE04A173BC43F002F816B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -99,7 +88,6 @@
 				44AFF96F172323F200EC6206 /* MobileCoreServices.framework in Frameworks */,
 				4401DD33171601ED0082ACC0 /* UIKit.framework in Frameworks */,
 				4401DD35171601ED0082ACC0 /* Foundation.framework in Frameworks */,
-				EF9191D4174529DE00FFC8B8 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,16 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				44A1A173173410E0004E1424 /* photoNoteRetinaIPad.png */,
-				EF9191CA174529DE00FFC8B8 /* GADAdMobExtras.h */,
-				EF9191CB174529DE00FFC8B8 /* GADAdNetworkExtras.h */,
-				EF9191CC174529DE00FFC8B8 /* GADAdSize.h */,
-				EF9191CD174529DE00FFC8B8 /* GADBannerView.h */,
-				EF9191CE174529DE00FFC8B8 /* GADBannerViewDelegate.h */,
-				EF9191CF174529DE00FFC8B8 /* GADInterstitial.h */,
-				EF9191D0174529DE00FFC8B8 /* GADInterstitialDelegate.h */,
-				EF9191D1174529DE00FFC8B8 /* GADRequest.h */,
-				EF9191D2174529DE00FFC8B8 /* GADRequestError.h */,
-				EF9191D3174529DE00FFC8B8 /* libGoogleAdMobAds.a */,
 				44A1A1711734109F004E1424 /* photoNoteNonRetinaIPad.png */,
 				EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */,
 				EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */,
@@ -324,6 +302,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-ObjC";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CFLAGS = "-ObjC";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,11 +345,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../AlphaPhotoNote/AlphaPhotoNote/AdMob\"",
-					"\"$(SRCROOT)/../../Downloads/CJPAdController-master/Demo/CJPAdControllerDemo/AdMob\"",
-					"\"$(SRCROOT)/AdMob\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/AlphaPhotoNote\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AlphaPhotoNoteFree;
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,11 +362,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../AlphaPhotoNote/AlphaPhotoNote/AdMob\"",
-					"\"$(SRCROOT)/../../Downloads/CJPAdController-master/Demo/CJPAdControllerDemo/AdMob\"",
-					"\"$(SRCROOT)/AdMob\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/AlphaPhotoNote\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AlphaPhotoNoteFree;
 				WRAPPER_EXTENSION = app;
 			};
