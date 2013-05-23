@@ -125,7 +125,7 @@
                     }
                     completion:NULL
      ];
-    _newMedia = YES;
+    _newMedia = NO;
     self.selectedImage.beginTouch = NO;
 }
 
@@ -142,7 +142,7 @@
                     }
                     completion:NULL
      ];
-    _newMedia = YES;
+    _newMedia = NO;
     self.selectedImage.beginTouch = NO;
 }
 
@@ -241,7 +241,7 @@
 
 - (IBAction)saveAlphaPhoto:(UIBarButtonItem *)sender
 {
-    if ((_newMedia) && (self.selectedImage.beginTouch))
+    if ((_newMedia) || (self.selectedImage.beginTouch))
     {
         UIImageWriteToSavedPhotosAlbum([self makeImage],
                                        self,
@@ -249,6 +249,7 @@
                                        nil);
     
         _newMedia = NO;
+        self.selectedImage.beginTouch = NO;
     }
     
 }
@@ -394,7 +395,7 @@
     {
     self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
     self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -(self.view.frame.size.height- self.view.bounds.size.height));
-    self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     
     [self.view addSubview:self.bannerView];
