@@ -111,7 +111,7 @@
         [self.path moveToPoint:pts[0]];
         [self.path addCurveToPoint:pts[3] controlPoint1:pts[1] controlPoint2:pts[2]];
         [self drawBitmap];
-       //[self setNeedsDisplay];
+        [self setNeedsDisplay];
         // replace points and get ready to handle the next segment
         pts[0] = pts[3]; 
         pts[1] = pts[4]; 
