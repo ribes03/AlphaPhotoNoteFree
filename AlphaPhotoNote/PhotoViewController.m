@@ -10,12 +10,12 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <QuartzCore/QuartzCore.h>
 #import <iAd/iAd.h>
-//#import "GADBannerView.h"
+#import "GADBannerView.h"
 
 #define kActionSheetColor       100
 
 
-@interface PhotoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIPopoverControllerDelegate,UIActionSheetDelegate,ADBannerViewDelegate>/*GADBannerViewDelegate*/
+@interface PhotoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIPopoverControllerDelegate,UIActionSheetDelegate,ADBannerViewDelegate,GADBannerViewDelegate>
 
 
 @property (strong, nonatomic) UIPopoverController *imagePickerPopover;
@@ -26,11 +26,11 @@
 @property (weak, nonatomic) IBOutlet SmoothedBIView *selectedImage;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *trashButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *clearButton;
-
+@property (nonatomic,assign) BOOL alertShowing;
 @property (strong, nonatomic) ADBannerView *bannerView;
-//@property (strong, nonatomic) GADBannerView *adMobView;
+@property (strong, nonatomic) GADBannerView *adMobView;
 @property (nonatomic,assign) BOOL bannerAdIsVisible;
-//@property (nonatomic,assign) BOOL bannerGADIsVisible;
+@property (nonatomic,assign) BOOL bannerGADIsVisible;
 @property (nonatomic,assign) BOOL showAds;
 @property (weak, nonatomic) IBOutlet UILabel *presentationLabel;
 @end
@@ -40,7 +40,7 @@
 @synthesize colorButton,saveButton,trashButton,clearButton,presentationLabel;
 @synthesize selectedImage = _selectedImage;
 @synthesize bannerView = _bannerView;
-//@synthesize adMobView  = _adMobView;
+@synthesize adMobView  = _adMobView;
 
 
 - (void)awakeFromNib
@@ -96,10 +96,23 @@
                                                     otherButtonTitles:@"Black", @"Red", @"Green", @"Blue", nil];
     
     [actionSheet setTag:kActionSheetColor];
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) [actionSheet showFromBarButtonItem:sender animated:YES];
-        else [actionSheet showInView:self.selectedImage];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+       if (!_alertShowing){
+            [actionSheet showFromBarButtonItem:sender animated:YES];
+            actionSheet.delegate = self;
+            _alertShowing = YES;
+        }
+        
+    } else [actionSheet showInView:self.selectedImage];
     
 }
+
+- (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    _alertShowing = NO;
+}
+
+
 - (IBAction)trashNote:(UIBarButtonItem *)sender
 {
     [UIView transitionWithView:self.selectedImage
@@ -276,7 +289,7 @@
         self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
         [UIView commitAnimations];
         self.bannerAdIsVisible = YES;
-   //     self.bannerGADIsVisible = NO;
+        self.bannerGADIsVisible = NO;
     }
  
 }
@@ -301,9 +314,9 @@
         self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -(self.view.frame.size.height- self.view.bounds.size.height));
         [UIView commitAnimations];
         self.bannerAdIsVisible = NO;
-    //    self.bannerGADIsVisible = YES;
+        self.bannerGADIsVisible = YES;
     }
-    /*
+    
     if (!self.bannerGADIsVisible)
     {
         [UIView beginAnimations:@"animateGADBannerOn" context:NULL];
@@ -312,11 +325,11 @@
         [UIView commitAnimations];
         self.bannerGADIsVisible = YES;
         self.bannerAdIsVisible = NO;
-    }*/
+    }
  
 }
 
-/*
+
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
 {
    // NSLog(@"Failed to receive AdMob. Trying ...? %@", error.localizedDescription);
@@ -331,7 +344,7 @@
     }
     
     
-}*/
+}
 
 - (BOOL)bannerViewActionShouldBegin:
 (ADBannerView *)banner
@@ -359,13 +372,13 @@
       //Landscape;
         self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
- //       self.adMobView.adSize = kGADAdSizeSmartBannerLandscape;
+        self.adMobView.adSize = kGADAdSizeSmartBannerLandscape;
     }
     else{
     //Portrait;
         self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
- //       self.adMobView.adSize = kGADAdSizeSmartBannerPortrait;
+        self.adMobView.adSize = kGADAdSizeSmartBannerPortrait;
         
     }
  
@@ -374,7 +387,7 @@
 
 - (void) configueBanners
 {
-    //BOOL isIPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? YES : NO;
+    BOOL isIPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? YES : NO;
     
     //iAd
     if (self.showAds)
@@ -390,7 +403,7 @@
     self.bannerAdIsVisible=NO;
     
     //AdMob
- /*
+ 
     self.adMobView = [[GADBannerView alloc] initWithFrame:CGRectZero];
     self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0,  -(self.view.frame.size.height- self.view.bounds.size.height));
     
@@ -412,7 +425,7 @@
     
     [self.view addSubview:self.adMobView];
     self.bannerGADIsVisible=NO;
-        */
+        
     }
     
     

@@ -29,6 +29,9 @@
     [self setColorPen:[UIColor blueColor]];
     _shouldClean = NO;
     _beginTouch = NO;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(replaceImage:)];
+    tap.numberOfTapsRequired = 3; // Tap three to clear drawing!
+    [self addGestureRecognizer:tap];
      
 }
 
@@ -137,6 +140,11 @@
     self.bufferedImage = nil;
     [self drawBitmap];
     [self setNeedsDisplay];
+}
+
+-(void) replaceImage:(UITapGestureRecognizer *)t
+{
+    [self replaceImage];
 }
 
 -(void) replaceImage
