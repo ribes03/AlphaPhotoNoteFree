@@ -18,6 +18,7 @@
 		4401DD49171601ED0082ACC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4401DD48171601ED0082ACC0 /* Default-568h@2x.png */; };
 		4401DD4C171601ED0082ACC0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4401DD4A171601ED0082ACC0 /* MainStoryboard_iPhone.storyboard */; };
 		4401DD4F171601ED0082ACC0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4401DD4D171601ED0082ACC0 /* MainStoryboard_iPad.storyboard */; };
+		443782C917501609001A10AF /* SmoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = 443782C817501609001A10AF /* SmoothView.m */; };
 		44A1A170172C031D004E1424 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A1A16F172C031D004E1424 /* QuartzCore.framework */; };
 		44A1A1721734109F004E1424 /* photoNoteNonRetinaIPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A1A1711734109F004E1424 /* photoNoteNonRetinaIPad.png */; };
 		44A1A174173410E0004E1424 /* photoNoteRetinaIPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A1A173173410E0004E1424 /* photoNoteRetinaIPad.png */; };
@@ -52,6 +53,8 @@
 		4401DD48171601ED0082ACC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4401DD4B171601ED0082ACC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4401DD4E171601ED0082ACC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		443782C717501609001A10AF /* SmoothView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothView.h; sourceTree = "<group>"; };
+		443782C817501609001A10AF /* SmoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothView.m; sourceTree = "<group>"; };
 		44A1A16F172C031D004E1424 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		44A1A1711734109F004E1424 /* photoNoteNonRetinaIPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteNonRetinaIPad.png; path = ../photoNoteNonRetinaIPad.png; sourceTree = "<group>"; };
 		44A1A173173410E0004E1424 /* photoNoteRetinaIPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteRetinaIPad.png; path = ../photoNoteRetinaIPad.png; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 		4401DD38171601ED0082ACC0 /* AlphaPhotoNote */ = {
 			isa = PBXGroup;
 			children = (
+				443782C717501609001A10AF /* SmoothView.h */,
+				443782C817501609001A10AF /* SmoothView.m */,
 				44AFF976172468EF00EC6206 /* SmoothedBIView.h */,
 				44AFF977172468EF00EC6206 /* SmoothedBIView.m */,
 				44AFF96B17231F2000EC6206 /* PhotoViewController.h */,
@@ -272,6 +277,7 @@
 				44AFF96D17231F2000EC6206 /* PhotoViewController.m in Sources */,
 				44AFF97B172468EF00EC6206 /* SmoothedBIView.m in Sources */,
 				EFF0685C172A657D00767E07 /* RotableViewController.m in Sources */,
+				443782C917501609001A10AF /* SmoothView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
