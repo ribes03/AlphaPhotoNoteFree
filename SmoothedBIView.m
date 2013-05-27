@@ -169,6 +169,8 @@
     }
     [self.incrementalImage drawInRect:CGRectMake(0,0,self.bounds.size.width,self.bounds.size.height)];
     [self.colorPen setStroke];
+    CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), true);
+    CGContextSetShouldAntialias(UIGraphicsGetCurrentContext(), true);
     [self.path stroke];
     self.incrementalImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

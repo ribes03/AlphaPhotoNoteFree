@@ -254,6 +254,11 @@
     
 }
 
+- (IBAction)proVersion:(UIButton *)sender {
+    NSString *iTunesLink = @"http://itunes.apple.com/app/id648038259";
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+}
 
 -(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error
  contextInfo:(void *)contextInfo
@@ -288,6 +293,8 @@
         [UIView beginAnimations:@"animateiAdBannerOn" context:NULL];
         // banner is invisible now and moved out of the screen
         self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
+       // self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -self.bannerView.frame.size.height);
+
         [UIView commitAnimations];
         self.bannerAdIsVisible = YES;
         self.bannerGADIsVisible = NO;
@@ -313,6 +320,7 @@
         [UIView beginAnimations:@"animateiAdBannerOff" context:NULL];
         // banner is visible and we move it out of the screen, due to connection issue
         self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -(self.view.frame.size.height- self.view.bounds.size.height));
+     //   self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, self.bannerView.frame.size.height);
         [UIView commitAnimations];
         self.bannerAdIsVisible = NO;
         self.bannerGADIsVisible = YES;
@@ -322,7 +330,8 @@
     {
         [UIView beginAnimations:@"animateGADBannerOn" context:NULL];
         // banner is invisible now and moved out of the screen
-      //  self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
+        self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0, (self.view.frame.size.height- self.view.bounds.size.height));
+       // self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0, -self.adMobView.frame.size.height);
         [UIView commitAnimations];
         self.bannerGADIsVisible = YES;
         self.bannerAdIsVisible = NO;
@@ -339,6 +348,8 @@
         [UIView beginAnimations:@"animateGADBannerOff" context:NULL];
         // banner is visible and we move it out of the screen, due to connection issue
         self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0,  -(self.view.frame.size.height- self.view.bounds.size.height));
+      //  self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0,  self.adMobView.frame.size.height);
+        [UIView commitAnimations];
         [UIView commitAnimations];
         self.bannerGADIsVisible = NO;
         self.bannerAdIsVisible = NO;
@@ -394,7 +405,7 @@
     if (self.showAds)
     {
     self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -(self.view.frame.size.height- self.view.bounds.size.height));
+  //  self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -(self.view.frame.size.height- self.view.bounds.size.height));
     self.bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     
@@ -406,9 +417,9 @@
     //AdMob
  
     self.adMobView = [[GADBannerView alloc] initWithFrame:CGRectZero];
-    self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0,  -(self.view.frame.size.height- self.view.bounds.size.height));
+  //  self.adMobView.frame = CGRectOffset(self.adMobView.frame, 0,  -(self.view.frame.size.height- self.view.bounds.size.height));
     
-    self.adMobView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
+   // self.adMobView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     
     if (isIPad) {
         self.adMobView.adUnitID = kAdMobID_IPad;

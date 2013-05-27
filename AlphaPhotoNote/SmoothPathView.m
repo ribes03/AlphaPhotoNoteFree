@@ -117,8 +117,8 @@
     UITouch *touch = [touches anyObject];
     self.previousPoint = [touch locationInView:self];
     _beginTouch = YES;
-    [self drawtouchesBegan];
-    [self setNeedsDisplay];
+    //[self drawtouchesBegan];
+    //[self setNeedsDisplay];
     
 }
 
@@ -167,6 +167,16 @@
     
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0);
     
+    if (!self.incrementalImage) // first time; paint background white
+    {
+        UIBezierPath *rectpath = [UIBezierPath bezierPathWithRect:self.bounds];
+        [[UIColor whiteColor] setFill];
+        [rectpath fill];
+    } else {
+        if ((!_shouldClean) && (!self.incrementalImage))
+            [[UIColor colorWithPatternImage:self.incrementalImage] setFill];
+    }
+    
     [[self colorPen] setStroke];
     
     CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), true);
@@ -176,8 +186,8 @@
     [self.incrementalImage drawInRect:CGRectMake(0, 0, self.incrementalImage.size.width, self.incrementalImage.size.height)];
     [[self path] moveToPoint:self.mid1];
     //Use QuadCurve is the key
-    [[self path] addQuadCurveToPoint:self.prePreviousPoint controlPoint:self.mid2];
-    //[[self path] addCurveToPoint:currentPoint controlPoint1:self.mid1 controlPoint2:self.mid2];
+    //[[self path] addQuadCurveToPoint:self.prePreviousPoint controlPoint:self.mid2];
+    [[self path] addCurveToPoint:currentPoint controlPoint1:self.mid1 controlPoint2:self.mid2];
     [[self path] setLineCapStyle:kCGLineCapRound];
     
     CGFloat xDist = (previousPoint.x - currentPoint.x); //[2]
