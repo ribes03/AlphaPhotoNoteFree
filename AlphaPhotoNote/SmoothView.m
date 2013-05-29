@@ -23,14 +23,15 @@
 @synthesize colorPen = _colorPen;
 @synthesize incrementalImage = _incrementalImage;
 @synthesize bufferedImage = _bufferedImage;
+@synthesize shouldClean,beginTouch;
 
 
 -(void)configure
 {
     [self setMultipleTouchEnabled:NO];
     [self setColorPen:[UIColor blueColor]];
-    _shouldClean = NO;
-    _beginTouch = NO;
+    self.shouldClean = NO;
+    self.beginTouch = NO;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(replaceImage:)];
     tap.numberOfTapsRequired = 3; // Tap three to clear drawing!
     [self addGestureRecognizer:tap];
@@ -90,7 +91,7 @@
     [super touchesBegan:touches withEvent:event];
     UITouch *touch = [touches anyObject];
     self.previousPoint = [touch locationInView:self];
-    _beginTouch = YES;
+    self.beginTouch = YES;
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     if (!self.incrementalImage) // first time; paint background white
@@ -98,7 +99,7 @@
         [[UIColor whiteColor] setFill];
         CGContextFillRect(context, self.bounds);
     } else {
-        if ((!_shouldClean) && (!self.incrementalImage))
+        if ((!self.shouldClean) && (!self.incrementalImage))
             [[UIColor colorWithPatternImage:self.incrementalImage] setFill];
     }
     [self.incrementalImage drawInRect:CGRectMake(0,0,self.bounds.size.width,self.bounds.size.height)];
@@ -211,7 +212,7 @@
 
 - (void)trash
 {
-    _shouldClean = YES;
+    self.shouldClean = YES;
     self.incrementalImage = nil;
     self.bufferedImage = nil;
     [self setNeedsDisplay];

@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="44" width="768" height="936"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="eKt-X9-GKO" customClass="SmoothedBIView">
+                            <view contentMode="scaleToFill" id="eKt-X9-GKO" customClass="SmoothView">
                                 <rect key="frame" x="0.0" y="-48" width="768" height="984"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
