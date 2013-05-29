@@ -26,14 +26,13 @@
 @property (weak, nonatomic) IBOutlet SmoothedBIView *selectedImage;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *trashButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *clearButton;
-@property (nonatomic,assign) BOOL alertShowing,infoShowing;
+@property (nonatomic,assign) BOOL alertShowing;
 @property (strong, nonatomic) ADBannerView *bannerView;
 @property (strong, nonatomic) GADBannerView *adMobView;
 @property (nonatomic,assign) BOOL bannerAdIsVisible;
 @property (nonatomic,assign) BOOL bannerGADIsVisible;
 @property (nonatomic,assign) BOOL showAds;
 @property (weak, nonatomic) IBOutlet UILabel *presentationLabel;
-@property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @end
 
 @implementation PhotoViewController
@@ -50,7 +49,7 @@
     self.title = @"Photo Note";
     _newMedia = YES;
     self.showAds = YES;
-   [self showInfo:self.infoButton];
+   
   
 }
 
@@ -128,39 +127,6 @@
      ];
     _newMedia = NO;
     self.selectedImage.beginTouch = NO;
-}
-
-- (IBAction)showInfo:(UIButton *)sender
-{
-    
-    if (!_infoShowing){
-        [UIView transitionWithView:self.selectedImage
-                          duration:1.0
-                           options:UIViewAnimationOptionTransitionFlipFromRight
-                        animations:^ { self.selectedImage.alpha = 1.0;
-                            //234-230-202 BlancoPerla
-                            [self.view setBackgroundColor:[UIColor colorWithRed:254.0f/255.0f green:250.0f/255.0f blue:242.0f/255.0f alpha:1]];
-                            [self.presentationLabel setHidden:NO];
-                            [self.selectedImage setHidden:YES];
-                            // [self.presentationLabel setText:@"Photo Annotation                   Write a Note using your finger with a selected color over a Photo, Saved Image or White Canvas and save it to your camera roll.                          Start Writing on the Screen."];
-                        }
-                        completion:NULL
-         ];
-        _infoShowing = YES;
-    }else{
-        
-        [UIView transitionWithView:self.selectedImage
-                          duration:1.0
-                           options:UIViewAnimationOptionTransitionFlipFromRight
-                        animations:^ { self.selectedImage.alpha = 1.0;
-                            [self.selectedImage setHidden:NO];
-                        }
-                        completion:NULL
-         ];
-        _infoShowing = NO;
-    }
-    
-    
 }
 
     
