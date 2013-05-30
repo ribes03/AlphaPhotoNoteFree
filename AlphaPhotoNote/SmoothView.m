@@ -25,7 +25,6 @@
 @synthesize bufferedImage = _bufferedImage;
 @synthesize shouldClean,beginTouch;
 
-
 -(void)configure
 {
     [self setMultipleTouchEnabled:NO];
@@ -77,13 +76,6 @@
     return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    [self.incrementalImage drawInRect:rect];
-   // [self.path stroke];
-}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -122,12 +114,12 @@
     // calculate mid point
     CGPoint mid1 = [self calculateMidPointForPoint:self.previousPoint andPoint:self.prePreviousPoint];
     CGPoint mid2 = [self calculateMidPointForPoint:currentPoint andPoint:self.previousPoint];
-   //from
+    //from
     
-   // UIGraphicsBeginImageContext(self.incrementalImage.size);
+    // UIGraphicsBeginImageContext(self.incrementalImage.size);
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-   // UIGraphicsPushContext(context);
+    // UIGraphicsPushContext(context);
     
     [[self colorPen] setStroke];
     CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), true);
@@ -138,7 +130,7 @@
     
     CGContextMoveToPoint(context, mid1.x, mid1.y);
     // Use QuadCurve is the key
-    CGContextAddQuadCurveToPoint(context, self.previousPoint.x, self.previousPoint.y, mid2.x, mid2.y); 
+    CGContextAddQuadCurveToPoint(context, self.previousPoint.x, self.previousPoint.y, mid2.x, mid2.y);
     
     CGContextSetLineCap(context, kCGLineCapRound);
     
@@ -163,10 +155,10 @@
     
     CGContextSetLineWidth(context, self.lineWidth);
     CGContextStrokePath(context);
-  //  UIGraphicsPopContext();
+    //  UIGraphicsPopContext();
     self.incrementalImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-   
+    
     
     //to
 }
@@ -183,17 +175,16 @@
     [self setLineWidth:1.0];
     
     if ([touch tapCount] == 1) {
-      // UIGraphicsBeginImageContext(self.incrementalImage.size);
+        // UIGraphicsBeginImageContext(self.incrementalImage.size);
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0);
         CGContextRef context = UIGraphicsGetCurrentContext();
-      //  UIGraphicsPushContext(context);
+        //  UIGraphicsPushContext(context);
         
         [[self colorPen] setStroke];
-        
         CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), true);
         CGContextSetShouldAntialias(UIGraphicsGetCurrentContext(), true);
         
-      //  [self.incrementalImage drawInRect:CGRectMake(0, 0, self.incrementalImage.size.width, self.incrementalImage.size.height)];
+        //  [self.incrementalImage drawInRect:CGRectMake(0, 0, self.incrementalImage.size.width, self.incrementalImage.size.height)];
         [self.incrementalImage drawInRect:CGRectMake(0,0,self.bounds.size.width,self.bounds.size.height)];
         CGContextMoveToPoint(context, currentPoint.x, currentPoint.y);
         CGContextAddLineToPoint(context, currentPoint.x, currentPoint.y);
@@ -203,10 +194,10 @@
         CGContextSetLineWidth(context, 4.0);
         
         CGContextStrokePath(context);
-       // UIGraphicsPopContext();
+        // UIGraphicsPopContext();
         self.incrementalImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-       
+        
     }
 }
 
