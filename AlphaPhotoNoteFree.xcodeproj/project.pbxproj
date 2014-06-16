@@ -26,13 +26,11 @@
 		44AFF96D17231F2000EC6206 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AFF96C17231F2000EC6206 /* PhotoViewController.m */; };
 		44AFF96F172323F200EC6206 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AFF96E172323F200EC6206 /* MobileCoreServices.framework */; };
 		44AFF97B172468EF00EC6206 /* SmoothedBIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AFF977172468EF00EC6206 /* SmoothedBIView.m */; };
-		EF42ADC8174E5E2C00871D6A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF42AD97174E5E2C00871D6A /* libGoogleAdMobAds.a */; };
 		EF6E7A0E1733BD2700AF75AB /* photoNoteNonRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */; };
 		EF6E7A101733BD3200AF75AB /* photoNoteRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */; };
 		EFEAE047173BC40E002F816B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE046173BC40E002F816B /* MessageUI.framework */; };
 		EFEAE049173BC437002F816B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE048173BC437002F816B /* SystemConfiguration.framework */; };
 		EFEAE04B173BC43F002F816B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE04A173BC43F002F816B /* AudioToolbox.framework */; };
-		EFEAE04D173BC452002F816B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE04C173BC452002F816B /* StoreKit.framework */; };
 		EFEAE04E173BC465002F816B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E7A0B17339EA700AF75AB /* AdSupport.framework */; };
 		EFF0685C172A657D00767E07 /* RotableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0685A172A657D00767E07 /* RotableViewController.m */; };
 /* End PBXBuildFile section */
@@ -64,23 +62,12 @@
 		44AFF96E172323F200EC6206 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		44AFF976172468EF00EC6206 /* SmoothedBIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmoothedBIView.h; path = ../SmoothedBIView.h; sourceTree = "<group>"; };
 		44AFF977172468EF00EC6206 /* SmoothedBIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmoothedBIView.m; path = ../SmoothedBIView.m; sourceTree = "<group>"; };
-		EF42AD8E174E5E2C00871D6A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
-		EF42AD8F174E5E2C00871D6A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		EF42AD90174E5E2C00871D6A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
-		EF42AD91174E5E2C00871D6A /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		EF42AD92174E5E2C00871D6A /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		EF42AD93174E5E2C00871D6A /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		EF42AD94174E5E2C00871D6A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		EF42AD95174E5E2C00871D6A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		EF42AD96174E5E2C00871D6A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		EF42AD97174E5E2C00871D6A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		EF6E7A0B17339EA700AF75AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteNonRetina.png; path = ../photoNoteNonRetina.png; sourceTree = "<group>"; };
 		EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteRetina.png; path = ../photoNoteRetina.png; sourceTree = "<group>"; };
 		EFEAE046173BC40E002F816B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EFEAE048173BC437002F816B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EFEAE04A173BC43F002F816B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		EFEAE04C173BC452002F816B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EFF06859172A657D00767E07 /* RotableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotableViewController.h; path = ../RotableViewController.h; sourceTree = "<group>"; };
 		EFF0685A172A657D00767E07 /* RotableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotableViewController.m; path = ../RotableViewController.m; sourceTree = "<group>"; };
 		EFF0685B172A657D00767E07 /* SplitViewBarButtonItemPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplitViewBarButtonItemPresenter.h; path = ../SplitViewBarButtonItemPresenter.h; sourceTree = "<group>"; };
@@ -92,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEAE04E173BC465002F816B /* AdSupport.framework in Frameworks */,
-				EFEAE04D173BC452002F816B /* StoreKit.framework in Frameworks */,
 				EFEAE04B173BC43F002F816B /* AudioToolbox.framework in Frameworks */,
 				EFEAE049173BC437002F816B /* SystemConfiguration.framework in Frameworks */,
 				4401DD37171601ED0082ACC0 /* CoreGraphics.framework in Frameworks */,
@@ -102,7 +88,6 @@
 				44AFF96F172323F200EC6206 /* MobileCoreServices.framework in Frameworks */,
 				4401DD33171601ED0082ACC0 /* UIKit.framework in Frameworks */,
 				4401DD35171601ED0082ACC0 /* Foundation.framework in Frameworks */,
-				EF42ADC8174E5E2C00871D6A /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +114,6 @@
 		4401DD31171601ED0082ACC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFEAE04C173BC452002F816B /* StoreKit.framework */,
 				EFEAE04A173BC43F002F816B /* AudioToolbox.framework */,
 				EFEAE048173BC437002F816B /* SystemConfiguration.framework */,
 				EFEAE046173BC40E002F816B /* MessageUI.framework */,
@@ -163,7 +147,6 @@
 		4401DD39171601ED0082ACC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EF42AD32174E5E2B00871D6A /* GoogleAdMobAdsSdkiOS-6.4.2 */,
 				44A1A173173410E0004E1424 /* photoNoteRetinaIPad.png */,
 				44A1A1711734109F004E1424 /* photoNoteNonRetinaIPad.png */,
 				EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */,
@@ -182,23 +165,6 @@
 				4401DD48171601ED0082ACC0 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EF42AD32174E5E2B00871D6A /* GoogleAdMobAdsSdkiOS-6.4.2 */ = {
-			isa = PBXGroup;
-			children = (
-				EF42AD8E174E5E2C00871D6A /* GADAdMobExtras.h */,
-				EF42AD8F174E5E2C00871D6A /* GADAdNetworkExtras.h */,
-				EF42AD90174E5E2C00871D6A /* GADAdSize.h */,
-				EF42AD91174E5E2C00871D6A /* GADBannerView.h */,
-				EF42AD92174E5E2C00871D6A /* GADBannerViewDelegate.h */,
-				EF42AD93174E5E2C00871D6A /* GADInterstitial.h */,
-				EF42AD94174E5E2C00871D6A /* GADInterstitialDelegate.h */,
-				EF42AD95174E5E2C00871D6A /* GADRequest.h */,
-				EF42AD96174E5E2C00871D6A /* GADRequestError.h */,
-				EF42AD97174E5E2C00871D6A /* libGoogleAdMobAds.a */,
-			);
-			path = "GoogleAdMobAdsSdkiOS-6.4.2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +195,16 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Juan Ribes";
+				TargetAttributes = {
+					4401DD2E171601ED0082ACC0 = {
+						DevelopmentTeam = N8QV93L565;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 4401DD2A171601ED0082ACC0 /* Build configuration list for PBXProject "AlphaPhotoNoteFree" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,6 +351,7 @@
 		4401DD6B171601ED0082ACC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlphaPhotoNote/AlphaPhotoNoteFree-Prefix.pch";
 				INFOPLIST_FILE = "AlphaPhotoNote/AlphaPhotoNoteFree-Info.plist";
@@ -386,6 +363,8 @@
 					"\"$(SRCROOT)/AlphaPhotoNote/GoogleAdMobAdsSdkiOS-6.4.2/Add-ons/GoogleAnalyticsiOS_2.0beta4/Library\"",
 					"\"$(SRCROOT)/AlphaPhotoNote/GoogleAdMobAdsSdkiOS-6.4.2\"",
 				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AlphaPhotoNoteFree;
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +373,7 @@
 		4401DD6C171601ED0082ACC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlphaPhotoNote/AlphaPhotoNoteFree-Prefix.pch";
 				INFOPLIST_FILE = "AlphaPhotoNote/AlphaPhotoNoteFree-Info.plist";
@@ -405,6 +385,8 @@
 					"\"$(SRCROOT)/AlphaPhotoNote/GoogleAdMobAdsSdkiOS-6.4.2/Add-ons/GoogleAnalyticsiOS_2.0beta4/Library\"",
 					"\"$(SRCROOT)/AlphaPhotoNote/GoogleAdMobAdsSdkiOS-6.4.2\"",
 				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AlphaPhotoNoteFree;
 				WRAPPER_EXTENSION = app;
 			};

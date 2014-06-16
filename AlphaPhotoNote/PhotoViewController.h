@@ -11,10 +11,5 @@
 #import "SmoothedBIView.h"
 
 
-static NSString * const kAdMobID_IPhone = @"a151890d7860169";
-static NSString * const kAdMobID_IPad = @"a151890ee5b6254";
-// a151890d7860169 //iPhone
-// a151890ee5b6254 //iPad// Use AdMob's "Smart" size banners
-
 @interface PhotoViewController : RotableViewController
 @end
