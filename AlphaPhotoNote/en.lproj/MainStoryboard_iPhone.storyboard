@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VUq-c7-4D3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VUq-c7-4D3">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Photo View Controller-->
         <scene sceneID="Rml-qW-0QX">
             <objects>
                 <viewController id="Omw-AF-9kA" customClass="PhotoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mBf-Zh-XXK">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YxG-dP-LxH"/>
+                        <viewControllerLayoutGuide type="bottom" id="qew-tT-eAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="redraw" id="mBf-Zh-XXK">
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="LVs-rL-fWv" customClass="SmoothedBIView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-rL-fWv" customClass="SmoothedBIView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0A-cF-MMF">
-                                        <rect key="frame" x="0.0" y="82" width="320" height="296"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0A-cF-MMF">
+                                        <rect key="frame" x="0.0" y="82" width="600" height="328"/>
                                         <string key="text">Write a Note using your finger with a selected color over a Photo, Saved Image or White Canvas and save it to your camera roll. Start Writing on the Screen.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="szh-hz-CO1">
-                                        <rect key="frame" x="256" y="416" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szh-hz-CO1">
+                                        <rect key="frame" x="536" y="448" width="64" height="44"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES" staticText="YES"/>
                                         </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="QYo-ng-cMY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                         <state key="normal" title="PRO">
                                             <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,9 +49,25 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="szh-hz-CO1" secondAttribute="bottom" id="6WM-Ew-eU7"/>
+                                    <constraint firstItem="k0A-cF-MMF" firstAttribute="leading" secondItem="LVs-rL-fWv" secondAttribute="leading" id="AEh-AW-mET"/>
+                                    <constraint firstAttribute="trailing" secondItem="k0A-cF-MMF" secondAttribute="trailing" id="DqW-3f-3EH"/>
+                                    <constraint firstItem="k0A-cF-MMF" firstAttribute="centerY" secondItem="LVs-rL-fWv" secondAttribute="centerY" id="GVq-Sm-ZlB"/>
+                                    <constraint firstItem="szh-hz-CO1" firstAttribute="trailing" secondItem="k0A-cF-MMF" secondAttribute="trailing" id="Rbb-m0-jhJ"/>
+                                    <constraint firstItem="k0A-cF-MMF" firstAttribute="top" secondItem="LVs-rL-fWv" secondAttribute="top" constant="82" id="hCO-dI-ZPT"/>
+                                    <constraint firstItem="k0A-cF-MMF" firstAttribute="trailing" secondItem="szh-hz-CO1" secondAttribute="trailing" id="na2-9k-9ii"/>
+                                    <constraint firstItem="szh-hz-CO1" firstAttribute="top" secondItem="k0A-cF-MMF" secondAttribute="bottom" constant="38" id="zz5-Bj-Aej"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LVs-rL-fWv" firstAttribute="top" secondItem="YxG-dP-LxH" secondAttribute="bottom" id="JM5-TD-DPx"/>
+                            <constraint firstItem="LVs-rL-fWv" firstAttribute="bottom" secondItem="qew-tT-eAd" secondAttribute="top" id="OEl-DU-qUG"/>
+                            <constraint firstItem="LVs-rL-fWv" firstAttribute="leading" secondItem="mBf-Zh-XXK" secondAttribute="leading" id="YSz-iP-t5b"/>
+                            <constraint firstAttribute="trailing" secondItem="LVs-rL-fWv" secondAttribute="trailing" id="lsi-Sp-rWN"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
@@ -99,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ew-l1-olr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2851" y="-4504"/>
+            <point key="canvasLocation" x="-5345.625" y="-4757.7464788732395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2ua-N4-dOh">
@@ -126,12 +146,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TE-SZ-h4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3377" y="-4504"/>
+            <point key="canvasLocation" x="-6331.875" y="-4757.7464788732395"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

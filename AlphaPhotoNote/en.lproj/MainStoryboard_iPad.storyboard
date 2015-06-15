@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="V2F-cK-9Oq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V2F-cK-9Oq">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,34 +24,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpR-ey-eG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6528" y="-7212"/>
+            <point key="canvasLocation" x="-5100" y="-4225.78125"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="cCl-Ur-Fpm">
             <objects>
                 <viewController id="kct-tr-zNI" customClass="PhotoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rt8-09-akv">
-                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sad-dD-hqq"/>
+                        <viewControllerLayoutGuide type="bottom" id="SLb-hr-eJC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="redraw" id="Rt8-09-akv">
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="eKt-X9-GKO" customClass="SmoothView">
-                                <rect key="frame" x="0.0" y="-48" width="768" height="964"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eKt-X9-GKO" customClass="SmoothView">
+                                <rect key="frame" x="0.0" y="-48" width="600" height="540"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zgH-kD-Kuo">
-                                        <rect key="frame" x="224" y="399" width="320" height="174"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Write a Note using your finger with a selected color over a Photo, Saved Image or White Canvas and save it to your camera roll. Start Writing on the Screen.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JLT-1x-WdW">
-                                        <rect key="frame" x="684" y="900" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLT-1x-WdW">
+                                        <rect key="frame" x="516" y="476" width="64" height="44"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES" staticText="YES"/>
                                         </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="Fi4-yT-alP"/>
+                                            <constraint firstAttribute="height" constant="44" id="olc-fN-mB5"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                         <state key="normal" title="PRO">
                                             <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,11 +62,34 @@
                                             <action selector="proVersion:" destination="kct-tr-zNI" eventType="touchUpInside" id="6rU-79-2q0"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgH-kD-Kuo">
+                                        <rect key="frame" x="140" y="210" width="320" height="174"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="174" id="Eah-p3-88C"/>
+                                            <constraint firstAttribute="width" constant="320" id="IJQ-Nb-f0A"/>
+                                        </constraints>
+                                        <string key="text">Write a Note using your finger with a selected color over a Photo, Saved Image or White Canvas and save it to your camera roll. Start Writing on the Screen.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JLT-1x-WdW" secondAttribute="trailing" constant="20" id="5ca-qb-nnj"/>
+                                    <constraint firstItem="zgH-kD-Kuo" firstAttribute="centerX" secondItem="eKt-X9-GKO" secondAttribute="centerX" id="82B-pL-YIM"/>
+                                    <constraint firstAttribute="bottom" secondItem="JLT-1x-WdW" secondAttribute="bottom" constant="20" id="GjV-1E-6zB"/>
+                                    <constraint firstItem="zgH-kD-Kuo" firstAttribute="top" secondItem="eKt-X9-GKO" secondAttribute="top" constant="210" id="doB-I4-hMY"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eKt-X9-GKO" firstAttribute="bottom" secondItem="SLb-hr-eJC" secondAttribute="top" id="3Mk-NX-w9h"/>
+                            <constraint firstAttribute="trailing" secondItem="eKt-X9-GKO" secondAttribute="trailing" id="6Xk-9N-00h"/>
+                            <constraint firstItem="eKt-X9-GKO" firstAttribute="leading" secondItem="Rt8-09-akv" secondAttribute="leading" id="O9U-Fg-8Qf"/>
+                            <constraint firstItem="eKt-X9-GKO" firstAttribute="top" secondItem="Rt8-09-akv" secondAttribute="topMargin" constant="-48" id="hXB-wC-oki"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
@@ -118,12 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g20-r4-PB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5265" y="-7212"/>
+            <point key="canvasLocation" x="-4113.28125" y="-4225.78125"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
 </document>

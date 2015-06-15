@@ -26,6 +26,8 @@
 		44AFF96D17231F2000EC6206 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AFF96C17231F2000EC6206 /* PhotoViewController.m */; };
 		44AFF96F172323F200EC6206 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AFF96E172323F200EC6206 /* MobileCoreServices.framework */; };
 		44AFF97B172468EF00EC6206 /* SmoothedBIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AFF977172468EF00EC6206 /* SmoothedBIView.m */; };
+		EF1E07AE1B29EAAA00764CA7 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1E07AD1B29EAAA00764CA7 /* Launch Screen.xib */; };
+		EF1E07B01B29EC9400764CA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1E07AF1B29EC9400764CA7 /* Images.xcassets */; };
 		EF6E7A0E1733BD2700AF75AB /* photoNoteNonRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */; };
 		EF6E7A101733BD3200AF75AB /* photoNoteRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */; };
 		EFEAE047173BC40E002F816B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEAE046173BC40E002F816B /* MessageUI.framework */; };
@@ -62,6 +64,8 @@
 		44AFF96E172323F200EC6206 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		44AFF976172468EF00EC6206 /* SmoothedBIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmoothedBIView.h; path = ../SmoothedBIView.h; sourceTree = "<group>"; };
 		44AFF977172468EF00EC6206 /* SmoothedBIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmoothedBIView.m; path = ../SmoothedBIView.m; sourceTree = "<group>"; };
+		EF1E07AD1B29EAAA00764CA7 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		EF1E07AF1B29EC9400764CA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AlphaPhotoNoteFree/Images.xcassets; sourceTree = "<group>"; };
 		EF6E7A0B17339EA700AF75AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EF6E7A0D1733BD2700AF75AB /* photoNoteNonRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteNonRetina.png; path = ../photoNoteNonRetina.png; sourceTree = "<group>"; };
 		EF6E7A0F1733BD3200AF75AB /* photoNoteRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photoNoteRetina.png; path = ../photoNoteRetina.png; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		4401DD26171601ED0082ACC0 = {
 			isa = PBXGroup;
 			children = (
+				EF1E07AF1B29EC9400764CA7 /* Images.xcassets */,
 				4401DD38171601ED0082ACC0 /* AlphaPhotoNote */,
 				4401DD31171601ED0082ACC0 /* Frameworks */,
 				4401DD30171601ED0082ACC0 /* Products */,
@@ -138,6 +143,7 @@
 				44AFF96B17231F2000EC6206 /* PhotoViewController.h */,
 				44AFF96C17231F2000EC6206 /* PhotoViewController.m */,
 				4401DD4A171601ED0082ACC0 /* MainStoryboard_iPhone.storyboard */,
+				EF1E07AD1B29EAAA00764CA7 /* Launch Screen.xib */,
 				4401DD4D171601ED0082ACC0 /* MainStoryboard_iPad.storyboard */,
 				4401DD39171601ED0082ACC0 /* Supporting Files */,
 			);
@@ -233,9 +239,11 @@
 				4401DD47171601ED0082ACC0 /* Default@2x.png in Resources */,
 				4401DD49171601ED0082ACC0 /* Default-568h@2x.png in Resources */,
 				4401DD4C171601ED0082ACC0 /* MainStoryboard_iPhone.storyboard in Resources */,
+				EF1E07AE1B29EAAA00764CA7 /* Launch Screen.xib in Resources */,
 				4401DD4F171601ED0082ACC0 /* MainStoryboard_iPad.storyboard in Resources */,
 				EF6E7A0E1733BD2700AF75AB /* photoNoteNonRetina.png in Resources */,
 				EF6E7A101733BD3200AF75AB /* photoNoteRetina.png in Resources */,
+				EF1E07B01B29EC9400764CA7 /* Images.xcassets in Resources */,
 				44A1A1721734109F004E1424 /* photoNoteNonRetinaIPad.png in Resources */,
 				44A1A174173410E0004E1424 /* photoNoteRetinaIPad.png in Resources */,
 			);
@@ -351,6 +359,8 @@
 		4401DD6B171601ED0082ACC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlphaPhotoNote/AlphaPhotoNoteFree-Prefix.pch";
@@ -373,6 +383,8 @@
 		4401DD6C171601ED0082ACC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlphaPhotoNote/AlphaPhotoNoteFree-Prefix.pch";
